@@ -33,8 +33,17 @@ function startQuiz() {
         box2.innerHTML = allQuestions[0].choices[2];
         box3.innerHTML = allQuestions[0].choices[3];
     }
+
+    box0.addEventListener("click", function() {
+        questionAnswer.innerHTML = "Incorrect!";
+    });
+    box1.addEventListener("click", function() {
+        questionAnswer.innerHTML = "Incorrect!";
+    });
+    box3.addEventListener("click", function() {
+        questionAnswer.innerHTML = "Incorrect!";
+    });
     box2.addEventListener("click", function() {
        questionAnswer.innerHTML = "Correct!";
-      });
-
+    });
 }
