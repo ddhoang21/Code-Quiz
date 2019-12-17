@@ -33,17 +33,67 @@ function startQuiz() {
         box2.innerHTML = allQuestions[0].choices[2];
         box3.innerHTML = allQuestions[0].choices[3];
     }
-
-    box0.addEventListener("click", function() {
-        questionAnswer.innerHTML = "Incorrect!";
-    });
-    box1.addEventListener("click", function() {
-        questionAnswer.innerHTML = "Incorrect!";
-    });
-    box3.addEventListener("click", function() {
-        questionAnswer.innerHTML = "Incorrect!";
-    });
-    box2.addEventListener("click", function() {
-       questionAnswer.innerHTML = "Correct!";
-    });
 }
+
+box0.addEventListener("click", function() {
+    if (allQuestions[0].choices[0] === allQuestions[0].answer) {
+        questionAnswer.innerHTML = "Correct!";
+    } else {
+        questionAnswer.innerHTML = "Incorrect!";
+    }
+    questionBox.innerHTML = allQuestions[1].title;
+    box0.innerHTML = allQuestions[1].choices[0];
+    box1.innerHTML = allQuestions[1].choices[1];
+    box2.innerHTML = allQuestions[1].choices[2];
+    box3.innerHTML = allQuestions[1].choices[3];
+});
+
+box1.addEventListener("click", function() {
+    if (allQuestions[0].choices[1] === allQuestions[0].answer) {
+        questionAnswer.innerHTML = "Correct!";
+    } else {
+        questionAnswer.innerHTML = "Incorrect!";
+    }
+    questionBox.innerHTML = allQuestions[1].title;
+    box0.innerHTML = allQuestions[1].choices[0];
+    box1.innerHTML = allQuestions[1].choices[1];
+    box2.innerHTML = allQuestions[1].choices[2];
+    box3.innerHTML = allQuestions[1].choices[3];
+});
+
+box2.addEventListener("click", function() {
+    if (allQuestions[0].choices[2] === allQuestions[0].answer) {
+        questionAnswer.innerHTML = "Correct!";
+    } else {
+        questionAnswer.innerHTML = "Incorrect!";
+    }
+    questionBox.innerHTML = allQuestions[1].title;
+    box0.innerHTML = allQuestions[1].choices[0];
+    box1.innerHTML = allQuestions[1].choices[1];
+    box2.innerHTML = allQuestions[1].choices[2];
+    box3.innerHTML = allQuestions[1].choices[3];
+});
+
+box3.addEventListener("click", function() {
+    if (allQuestions[0].choices[3] === allQuestions[0].answer) {
+        questionAnswer.innerHTML = "Correct!";
+    } else {
+        questionAnswer.innerHTML = "Incorrect!";
+    }
+    questionBox.innerHTML = allQuestions[1].title;
+    box0.innerHTML = allQuestions[1].choices[0];
+    box1.innerHTML = allQuestions[1].choices[1];
+    box2.innerHTML = allQuestions[1].choices[2];
+    box3.innerHTML = allQuestions[1].choices[3];
+});
+
+    // var questionString = allQuestions[i].title;
+    // var answerIndex = allQuestions[i].answerIndex;
+    // var answerList = allQuestions[i].choices;
+    // var answer = allQuestions[i].answer;
+
+
+// function nextQuestion() {
+//     for (i = 0; i < allQuestions.length; i++) {
+
+// }
