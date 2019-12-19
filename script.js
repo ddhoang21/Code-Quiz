@@ -9,6 +9,7 @@ var box3 = document.getElementById("choice3");
 var questionAnswer = document.getElementById("answers");
 var questionIndex = 0;
 
+document.getElementById("initialBox").style.display = "none";
 document.getElementById("choice0").style.visibility = "hidden";
 document.getElementById("choice1").style.visibility = "hidden";
 document.getElementById("choice2").style.visibility = "hidden";
@@ -63,7 +64,11 @@ box0.addEventListener("click", function() {
         document.getElementById("choice0").style.display = "none";
         document.getElementById("choice1").style.display = "none";
         document.getElementById("choice2").style.display = "none";
-        document.getElementById("choice3").style.display = "none";    
+        document.getElementById("choice3").style.display = "none";
+        document.getElementById("text").innerHTML = "Your final score is"; 
+        document.getElementById("text").style.display = "block";
+        document.getElementById("initialBox").style.display = "block";
+        document.getElementById("submit-button").style.visibility = "visible";
     }
 });
 
@@ -93,7 +98,11 @@ box1.addEventListener("click", function() {
         document.getElementById("choice0").style.display = "none";
         document.getElementById("choice1").style.display = "none";
         document.getElementById("choice2").style.display = "none";
-        document.getElementById("choice3").style.display = "none";    
+        document.getElementById("choice3").style.display = "none";
+        document.getElementById("text").innerHTML = "Your final score is"; 
+        document.getElementById("text").style.display = "block";
+        document.getElementById("initialBox").style.display = "block";
+        document.getElementById("submit-button").style.visibility = "visible";
     }
 });
 
@@ -123,7 +132,11 @@ box2.addEventListener("click", function() {
         document.getElementById("choice0").style.display = "none";
         document.getElementById("choice1").style.display = "none";
         document.getElementById("choice2").style.display = "none";
-        document.getElementById("choice3").style.display = "none";    
+        document.getElementById("choice3").style.display = "none";
+        document.getElementById("text").innerHTML = "Your final score is"; 
+        document.getElementById("text").style.display = "block";
+        document.getElementById("initialBox").style.display = "block";
+        document.getElementById("submit-button").style.visibility = "visible";
     }
 });
 
@@ -151,6 +164,10 @@ box3.addEventListener("click", function() {
         document.getElementById("choice0").style.display = "none";
         document.getElementById("choice1").style.display = "none";
         document.getElementById("choice2").style.display = "none";
-        document.getElementById("choice3").style.display = "none";    
+        document.getElementById("choice3").style.display = "none";
+        document.getElementById("text").innerHTML = "Your final score is"; 
+        document.getElementById("text").style.display = "block";
+        document.getElementById("initialBox").style.display = "block";
+        document.getElementById("submit-button").style.visibility = "visible";
     }
 });
