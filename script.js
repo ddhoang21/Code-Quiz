@@ -35,58 +35,57 @@ function startQuiz() {
     box1.innerHTML = allQuestions[questionIndex].choices[1];
     box2.innerHTML = allQuestions[questionIndex].choices[2];
     box3.innerHTML = allQuestions[questionIndex].choices[3];
-
-    questionIndex++;
-
+    
 }
 
-
 box0.addEventListener("click", function() {
+
     if (allQuestions[questionIndex].choices[0] === allQuestions[questionIndex].answer) {
         questionAnswer.innerHTML = "Correct!";
     } else {
         questionAnswer.innerHTML = "Incorrect!";
     }
+
+    questionIndex++;
     questionBox.innerHTML = allQuestions[questionIndex].title;
     box0.innerHTML = allQuestions[questionIndex].choices[0];
     box1.innerHTML = allQuestions[questionIndex].choices[1];
     box2.innerHTML = allQuestions[questionIndex].choices[2];
     box3.innerHTML = allQuestions[questionIndex].choices[3];
-
-    questionIndex++;
-
 });
 
 box1.addEventListener("click", function() {
+    console.log(allQuestions[questionIndex].choices[1]);
+    console.log (allQuestions[questionIndex].answer);
     if (allQuestions[questionIndex].choices[1] === allQuestions[questionIndex].answer) {
         questionAnswer.innerHTML = "Correct!";
     } else {
         questionAnswer.innerHTML = "Incorrect!";
     }
+
+    questionIndex++;
     questionBox.innerHTML = allQuestions[questionIndex].title;
     box0.innerHTML = allQuestions[questionIndex].choices[0];
     box1.innerHTML = allQuestions[questionIndex].choices[1];
     box2.innerHTML = allQuestions[questionIndex].choices[2];
     box3.innerHTML = allQuestions[questionIndex].choices[3];
-
-    questionIndex++;
-
 });
 
 box2.addEventListener("click", function() {
+    console.log(allQuestions[questionIndex].choices[2]);
+    console.log (allQuestions[questionIndex].answer);
     if (allQuestions[questionIndex].choices[2] === allQuestions[questionIndex].answer) {
         questionAnswer.innerHTML = "Correct!";
     } else {
         questionAnswer.innerHTML = "Incorrect!";
     }
+
+    questionIndex++;
     questionBox.innerHTML = allQuestions[questionIndex].title;
     box0.innerHTML = allQuestions[questionIndex].choices[0];
     box1.innerHTML = allQuestions[questionIndex].choices[1];
     box2.innerHTML = allQuestions[questionIndex].choices[2];
     box3.innerHTML = allQuestions[questionIndex].choices[3];
-
-    questionIndex++;
-
 });
 
 box3.addEventListener("click", function() {
@@ -95,12 +94,11 @@ box3.addEventListener("click", function() {
     } else {
         questionAnswer.innerHTML = "Incorrect!";
     }
+
+    questionIndex++;
     questionBox.innerHTML = allQuestions[questionIndex].title;
     box0.innerHTML = allQuestions[questionIndex].choices[0];
     box1.innerHTML = allQuestions[questionIndex].choices[1];
     box2.innerHTML = allQuestions[questionIndex].choices[2];
     box3.innerHTML = allQuestions[questionIndex].choices[3];
-
-    questionIndex++;
-
 });
