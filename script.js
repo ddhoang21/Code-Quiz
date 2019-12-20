@@ -1,5 +1,4 @@
 var startBtn = document.getElementById("start-button");
-var submitBtn = document.getElementById("submit");
 
 var questionBox = document.getElementById("question-container");
 var box0 = document.getElementById("choice0");
@@ -8,6 +7,7 @@ var box2 = document.getElementById("choice2");
 var box3 = document.getElementById("choice3");
 var questionAnswer = document.getElementById("answers");
 var questionIndex = 0;
+
 
 document.getElementById("initialBox").style.display = "none";
 document.getElementById("choice0").style.visibility = "hidden";
