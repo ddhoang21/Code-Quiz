@@ -14,7 +14,7 @@ document.getElementById("choice0").style.visibility = "hidden";
 document.getElementById("choice1").style.visibility = "hidden";
 document.getElementById("choice2").style.visibility = "hidden";
 document.getElementById("choice3").style.visibility = "hidden";
-document.getElementById("submit-button").style.visibility = "hidden";
+document.getElementById("submitForm").style.visibility = "hidden";
 
 startBtn.addEventListener("click", startQuiz);
 
@@ -43,12 +43,12 @@ box0.addEventListener("click", function() {
         questionAnswer.innerHTML = "Correct!";
         setTimeout(function() {
             questionAnswer.innerHTML = "";    
-        }, 1000);
+        }, 500);
     } else {
         questionAnswer.innerHTML = "Incorrect!";
         setTimeout(function() {
-            questionAnswer.innerHTML = "";    
-        }, 1000);
+            questionAnswer.innerHTML = "";
+        }, 500);
     }
 
     questionIndex++;
@@ -67,8 +67,7 @@ box0.addEventListener("click", function() {
         questionBox.innerHTML = "All Done!";
         document.getElementById("text").innerHTML = "Your final score is"; 
         document.getElementById("text").style.display = "block";
-        document.getElementById("initialBox").style.display = "block";
-        document.getElementById("submit-button").style.visibility = "visible";
+        document.getElementById("submitForm").style.visibility = "visible";
     }
 });
 
@@ -77,12 +76,12 @@ box1.addEventListener("click", function() {
         questionAnswer.innerHTML = "Correct!";
         setTimeout(function() {
             questionAnswer.innerHTML = "";    
-        }, 1000);
+        }, 500);
     } else {
         questionAnswer.innerHTML = "Incorrect!";
         setTimeout(function() {
             questionAnswer.innerHTML = "";    
-        }, 1000);
+        }, 500);
     }
 
     questionIndex++;
@@ -101,8 +100,7 @@ box1.addEventListener("click", function() {
         questionBox.innerHTML = "All Done!";
         document.getElementById("text").innerHTML = "Your final score is"; 
         document.getElementById("text").style.display = "block";
-        document.getElementById("initialBox").style.display = "block";
-        document.getElementById("submit-button").style.visibility = "visible";
+        document.getElementById("submitForm").style.visibility = "visible";
     }
 });
 
@@ -111,12 +109,12 @@ box2.addEventListener("click", function() {
         questionAnswer.innerHTML = "Correct!";
         setTimeout(function() {
             questionAnswer.innerHTML = "";    
-        }, 1000);
+        }, 500);
     } else {
         questionAnswer.innerHTML = "Incorrect!";
         setTimeout(function() {
             questionAnswer.innerHTML = "";    
-        }, 1000);
+        }, 500);
     }
 
     questionIndex++;
@@ -135,8 +133,7 @@ box2.addEventListener("click", function() {
         questionBox.innerHTML = "All Done!";
         document.getElementById("text").innerHTML = "Your final score is"; 
         document.getElementById("text").style.display = "block";
-        document.getElementById("initialBox").style.display = "block";
-        document.getElementById("submit-button").style.visibility = "visible";
+        document.getElementById("submitForm").style.visibility = "visible";
     }
 });
 
@@ -145,12 +142,12 @@ box3.addEventListener("click", function() {
         questionAnswer.innerHTML = "Correct!";
         setTimeout(function() {
             questionAnswer.innerHTML = "";    
-        }, 1000);
+        }, 500);
     } else {
         questionAnswer.innerHTML = "Incorrect!";
         setTimeout(function() {
             questionAnswer.innerHTML = "";    
-        }, 1000);
+        }, 500);
     }
 
     questionIndex++;
@@ -169,7 +166,6 @@ box3.addEventListener("click", function() {
         questionBox.innerHTML = "All Done!";
         document.getElementById("text").innerHTML = "Your final score is"; 
         document.getElementById("text").style.display = "block";
-        document.getElementById("initialBox").style.display = "block";
-        document.getElementById("submit-button").style.visibility = "visible";
+        document.getElementById("submitForm").style.visibility = "visible";
     }
 });

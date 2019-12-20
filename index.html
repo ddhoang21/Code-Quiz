@@ -38,8 +38,14 @@
                     <label for="choice3"></label>
                     <button type="button" class="btn btn-info btn-sm" role="button" id="choice3"></button>
                 </div>
-                <div class="btn btn-info btn-sm" role="button" id="start-button">Start Quiz</div>
-                <div class="btn btn-info btn-sm" role="button" id="submit-button">Submit</div>
+                <div class="btn btn-info" role="button" id="start-button">Start Quiz</div>
+                <form class="form-inline" id="submitForm">
+                    <p class="form-group mb-2">Enter initials:</p>
+                    <div class="form-group mx-2 mb-2">
+                        <input type="text" class="form-control" id="initialsBox">
+                    </div>
+                    <button type="submit" class="btn btn-info btn-sm mb-2">Submit</button>
+                </form>
                 <p id="answers"></p>
             <div class="col-md-3"></div>
         </div>
