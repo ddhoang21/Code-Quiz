@@ -23,7 +23,6 @@ startBtn.addEventListener("click", startQuiz);
 // var answer = allQuestions[i].answer;
 
 function startQuiz() {
-
     document.getElementById("text").style.display = "none";
     document.getElementById("start-button").style.visibility = "hidden";
     document.getElementById("choice0").style.visibility = "visible";
@@ -40,7 +39,6 @@ function startQuiz() {
 }
 
 box0.addEventListener("click", function() {
-
     if (allQuestions[questionIndex].choices[0] === allQuestions[questionIndex].answer) {
         questionAnswer.innerHTML = "Correct!";
         setTimeout(function() {
@@ -55,7 +53,7 @@ box0.addEventListener("click", function() {
 
     questionIndex++;
     if (questionIndex <= 4) {
-    questionBox.innerHTML = allQuestions[questionIndex].title;
+        questionBox.innerHTML = allQuestions[questionIndex].title;
         box0.innerHTML = allQuestions[questionIndex].choices[0];
         box1.innerHTML = allQuestions[questionIndex].choices[1];
         box2.innerHTML = allQuestions[questionIndex].choices[2];
