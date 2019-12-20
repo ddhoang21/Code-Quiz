@@ -54,17 +54,19 @@ box0.addEventListener("click", function() {
     }
 
     questionIndex++;
+    if (questionIndex <= 4) {
     questionBox.innerHTML = allQuestions[questionIndex].title;
-    box0.innerHTML = allQuestions[questionIndex].choices[0];
-    box1.innerHTML = allQuestions[questionIndex].choices[1];
-    box2.innerHTML = allQuestions[questionIndex].choices[2];
-    box3.innerHTML = allQuestions[questionIndex].choices[3];
-
-    if (allQuestions[questionIndex].choices[0] === allQuestions[5].choices[0]) {
+        box0.innerHTML = allQuestions[questionIndex].choices[0];
+        box1.innerHTML = allQuestions[questionIndex].choices[1];
+        box2.innerHTML = allQuestions[questionIndex].choices[2];
+        box3.innerHTML = allQuestions[questionIndex].choices[3];
+    }
+    if (questionIndex > 4) {
         document.getElementById("choice0").style.display = "none";
         document.getElementById("choice1").style.display = "none";
         document.getElementById("choice2").style.display = "none";
         document.getElementById("choice3").style.display = "none";
+        questionBox.innerHTML = "All Done!";
         document.getElementById("text").innerHTML = "Your final score is"; 
         document.getElementById("text").style.display = "block";
         document.getElementById("initialBox").style.display = "block";
@@ -73,8 +75,6 @@ box0.addEventListener("click", function() {
 });
 
 box1.addEventListener("click", function() {
-    console.log(allQuestions[questionIndex].choices[1]);
-    console.log (allQuestions[questionIndex].answer);
     if (allQuestions[questionIndex].choices[1] === allQuestions[questionIndex].answer) {
         questionAnswer.innerHTML = "Correct!";
         setTimeout(function() {
@@ -88,17 +88,19 @@ box1.addEventListener("click", function() {
     }
 
     questionIndex++;
+    if (questionIndex <= 4) {
     questionBox.innerHTML = allQuestions[questionIndex].title;
-    box0.innerHTML = allQuestions[questionIndex].choices[0];
-    box1.innerHTML = allQuestions[questionIndex].choices[1];
-    box2.innerHTML = allQuestions[questionIndex].choices[2];
-    box3.innerHTML = allQuestions[questionIndex].choices[3];
-
-    if (allQuestions[questionIndex].choices[1] === allQuestions[5].choices[1]) {
+        box0.innerHTML = allQuestions[questionIndex].choices[0];
+        box1.innerHTML = allQuestions[questionIndex].choices[1];
+        box2.innerHTML = allQuestions[questionIndex].choices[2];
+        box3.innerHTML = allQuestions[questionIndex].choices[3];
+    }
+    if (questionIndex > 4) {
         document.getElementById("choice0").style.display = "none";
         document.getElementById("choice1").style.display = "none";
         document.getElementById("choice2").style.display = "none";
         document.getElementById("choice3").style.display = "none";
+        questionBox.innerHTML = "All Done!";
         document.getElementById("text").innerHTML = "Your final score is"; 
         document.getElementById("text").style.display = "block";
         document.getElementById("initialBox").style.display = "block";
@@ -107,8 +109,6 @@ box1.addEventListener("click", function() {
 });
 
 box2.addEventListener("click", function() {
-    console.log(allQuestions[questionIndex].choices[2]);
-    console.log (allQuestions[questionIndex].answer);
     if (allQuestions[questionIndex].choices[2] === allQuestions[questionIndex].answer) {
         questionAnswer.innerHTML = "Correct!";
         setTimeout(function() {
@@ -122,17 +122,19 @@ box2.addEventListener("click", function() {
     }
 
     questionIndex++;
+    if (questionIndex <= 4) {
     questionBox.innerHTML = allQuestions[questionIndex].title;
-    box0.innerHTML = allQuestions[questionIndex].choices[0];
-    box1.innerHTML = allQuestions[questionIndex].choices[1];
-    box2.innerHTML = allQuestions[questionIndex].choices[2];
-    box3.innerHTML = allQuestions[questionIndex].choices[3];
-
-    if (allQuestions[questionIndex].choices[2] === allQuestions[5].choices[2]) {
+        box0.innerHTML = allQuestions[questionIndex].choices[0];
+        box1.innerHTML = allQuestions[questionIndex].choices[1];
+        box2.innerHTML = allQuestions[questionIndex].choices[2];
+        box3.innerHTML = allQuestions[questionIndex].choices[3];
+    }
+    if (questionIndex > 4) {
         document.getElementById("choice0").style.display = "none";
         document.getElementById("choice1").style.display = "none";
         document.getElementById("choice2").style.display = "none";
         document.getElementById("choice3").style.display = "none";
+        questionBox.innerHTML = "All Done!";
         document.getElementById("text").innerHTML = "Your final score is"; 
         document.getElementById("text").style.display = "block";
         document.getElementById("initialBox").style.display = "block";
@@ -154,17 +156,19 @@ box3.addEventListener("click", function() {
     }
 
     questionIndex++;
+    if (questionIndex <= 4) {
     questionBox.innerHTML = allQuestions[questionIndex].title;
-    box0.innerHTML = allQuestions[questionIndex].choices[0];
-    box1.innerHTML = allQuestions[questionIndex].choices[1];
-    box2.innerHTML = allQuestions[questionIndex].choices[2];
-    box3.innerHTML = allQuestions[questionIndex].choices[3];
-
-    if (allQuestions[questionIndex].choices[3] === allQuestions[5].choices[3]) {
+        box0.innerHTML = allQuestions[questionIndex].choices[0];
+        box1.innerHTML = allQuestions[questionIndex].choices[1];
+        box2.innerHTML = allQuestions[questionIndex].choices[2];
+        box3.innerHTML = allQuestions[questionIndex].choices[3];
+    }
+    if (questionIndex > 4) {
         document.getElementById("choice0").style.display = "none";
         document.getElementById("choice1").style.display = "none";
         document.getElementById("choice2").style.display = "none";
         document.getElementById("choice3").style.display = "none";
+        questionBox.innerHTML = "All Done!";
         document.getElementById("text").innerHTML = "Your final score is"; 
         document.getElementById("text").style.display = "block";
         document.getElementById("initialBox").style.display = "block";
