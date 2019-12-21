@@ -13,8 +13,8 @@
 <body>
 
     <nav class="nav justify-content-between">
-        <a class="nav-link" href="highscore.html" >View Highscores</a>
-        <a class="nav-link" id="timer"></a>
+        <a class="nav-link" href="highscore.html">View Highscores</a>
+        <a class="nav-link" id="timer">Time: 0</a>
     </nav>
 
     <div class="container">
@@ -41,9 +41,9 @@
                 <form class="form-inline" id="submitForm" action="highscore.html">
                     <p class="form-group mb-2">Enter initials:</p>
                     <div class="form-group mx-2 mb-2">
-                        <input type="text" class="form-control" id="initialsBox">
+                        <input type="text" name="username" class="form-control" id="initialsBox">
                     </div>
-                    <button type="submit" class="btn btn-info btn-sm mb-2">Submit</button>
+                    <button type="submit" value="Submit" class="btn btn-info btn-sm mb-2" id="submit-button">Submit</button>
                 </form>
                 <p id="answers"></p>
             <div class="col-md-3"></div>
@@ -51,7 +51,7 @@
     </div>
 
     <!--Javascript link-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"}
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

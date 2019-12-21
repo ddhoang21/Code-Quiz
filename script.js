@@ -1,5 +1,4 @@
 var startBtn = document.getElementById("start-button");
-
 var questionBox = document.getElementById("question-container");
 var box0 = document.getElementById("choice0");
 var box1 = document.getElementById("choice1");
@@ -7,9 +6,8 @@ var box2 = document.getElementById("choice2");
 var box3 = document.getElementById("choice3");
 var questionAnswer = document.getElementById("answers");
 var questionIndex = 0;
-
+var count = 75;
 var backBtn = document.getElementById("back-button");
-var clearScoreBtn = document.getElementById("clearScore-button");
 
 document.getElementById("choice0").style.visibility = "hidden";
 document.getElementById("choice1").style.visibility = "hidden";
@@ -21,14 +19,13 @@ startBtn.addEventListener("click", startQuiz);
 
 function startQuiz() {
 
-    var count = 75; 
+    document.getElementById("timer").innerHTML = "Time: " + count;
     var i = setInterval(function(){
         document.getElementById("timer").innerHTML = "Time: " + count;
         count--;
         if (questionAnswer.innerHTML === "<hr>Wrong!") {
             count = count - 10;
             document.getElementById("timer").innerHTML = "Time: " + count;
-            console.log(count);
         }
         if (questionIndex > 4) {
             clearInterval(i);
@@ -40,7 +37,7 @@ function startQuiz() {
             document.getElementById("choice2").style.display = "none";
             document.getElementById("choice3").style.display = "none";
             questionBox.innerHTML = "All Done!";
-            document.getElementById("text").innerHTML = "Your final score is"; 
+            document.getElementById("text").innerHTML = "Your final score is " + count; 
             document.getElementById("text").style.display = "block";
             document.getElementById("submitForm").style.visibility = "visible";
         }
@@ -69,6 +66,8 @@ box0.addEventListener("click", function() {
         }, 500);
     } else {
         questionAnswer.innerHTML = "<hr>Wrong!";
+        count = count - 10;
+        document.getElementById("timer").innerHTML = "Time: " + count;
         setTimeout(function() {
             questionAnswer.innerHTML = "";
         }, 500);
@@ -88,7 +87,7 @@ box0.addEventListener("click", function() {
         document.getElementById("choice2").style.display = "none";
         document.getElementById("choice3").style.display = "none";
         questionBox.innerHTML = "All Done!";
-        document.getElementById("text").innerHTML = "Your final score is"; 
+        document.getElementById("text").innerHTML = "Your final score is " + count; 
         document.getElementById("text").style.display = "block";
         document.getElementById("submitForm").style.visibility = "visible";
     }
@@ -102,6 +101,8 @@ box1.addEventListener("click", function() {
         }, 500);
     } else {
         questionAnswer.innerHTML = "<hr>Wrong!";
+        count = count - 10;
+        document.getElementById("timer").innerHTML = "Time: " + count;
         setTimeout(function() {
             questionAnswer.innerHTML = "";    
         }, 500);
@@ -121,7 +122,7 @@ box1.addEventListener("click", function() {
         document.getElementById("choice2").style.display = "none";
         document.getElementById("choice3").style.display = "none";
         questionBox.innerHTML = "All Done!";
-        document.getElementById("text").innerHTML = "Your final score is"; 
+        document.getElementById("text").innerHTML = "Your final score is " + count; 
         document.getElementById("text").style.display = "block";
         document.getElementById("submitForm").style.visibility = "visible";
     }
@@ -135,6 +136,8 @@ box2.addEventListener("click", function() {
         }, 500);
     } else {
         questionAnswer.innerHTML = "<hr>Wrong!";
+        count = count - 10;
+        document.getElementById("timer").innerHTML = "Time: " + count;
         setTimeout(function() {
             questionAnswer.innerHTML = "";    
         }, 500);
@@ -154,7 +157,7 @@ box2.addEventListener("click", function() {
         document.getElementById("choice2").style.display = "none";
         document.getElementById("choice3").style.display = "none";
         questionBox.innerHTML = "All Done!";
-        document.getElementById("text").innerHTML = "Your final score is"; 
+        document.getElementById("text").innerHTML = "Your final score is " + count; 
         document.getElementById("text").style.display = "block";
         document.getElementById("submitForm").style.visibility = "visible";
     }
@@ -168,6 +171,8 @@ box3.addEventListener("click", function() {
         }, 500);
     } else {
         questionAnswer.innerHTML = "<hr>Wrong!";
+        count = count - 10;
+        document.getElementById("timer").innerHTML = "Time: " + count;
         setTimeout(function() {
             questionAnswer.innerHTML = "";    
         }, 500);
@@ -187,8 +192,19 @@ box3.addEventListener("click", function() {
         document.getElementById("choice2").style.display = "none";
         document.getElementById("choice3").style.display = "none";
         questionBox.innerHTML = "All Done!";
-        document.getElementById("text").innerHTML = "Your final score is"; 
+        document.getElementById("text").innerHTML = "Your final score is " + count; 
         document.getElementById("text").style.display = "block";
         document.getElementById("submitForm").style.visibility = "visible";
     }
 });
+
+var submitBtn = document.getElementById("submit-button");
+var initialsBox = document.getElementById("initialsBox");
+
+submitBtn.addEventListener("click", savedScores);
+
+function savedScores() {
+    localStorage.setItem(initialsBox.value, count);
+    localStorage.getItem(initialsBox.value);
+}
+
