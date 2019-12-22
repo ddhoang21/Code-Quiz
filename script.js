@@ -21,13 +21,15 @@ function startQuiz() {
 
     document.getElementById("timer").innerHTML = "Time: " + count;
     var i = setInterval(function(){
-        document.getElementById("timer").innerHTML = "Time: " + count;
-        count--;
         if (questionIndex > 4) {
             clearInterval(i);
             document.getElementById("timer").style.visibility = "hidden";
+        } else {
+            count--;
+            document.getElementById("timer").innerHTML = "Time: " + count;
         }
         if (count === 0 || count < 0) {
+            count = 0;
             clearInterval(i);
             document.getElementById("text").innerHTML = "Your final score is " + count; 
             document.getElementById("text").style.display = "block";
@@ -80,6 +82,9 @@ box0.addEventListener("click", function() {
         box3.innerHTML = allQuestions[questionIndex].choices[3];
     }
     if (questionIndex > 4) {
+        if(count < 0) {
+            count = 0;
+        }
         document.getElementById("text").innerHTML = "Your final score is " + count; 
         document.getElementById("text").style.display = "block";
         questionBox.innerHTML = "All Done!";
@@ -116,7 +121,10 @@ box1.addEventListener("click", function() {
         box3.innerHTML = allQuestions[questionIndex].choices[3];
     }
     if (questionIndex > 4) {
-        document.getElementById("text").innerHTML = "Your final score is " + count; 
+        if(count < 0) {
+            count = 0;
+        }
+        document.getElementById("text").innerHTML = "Your final score is " + count;
         document.getElementById("text").style.display = "block";
         questionBox.innerHTML = "All Done!";
         document.getElementById("submitForm").style.visibility = "visible";
@@ -152,7 +160,10 @@ box2.addEventListener("click", function() {
         box3.innerHTML = allQuestions[questionIndex].choices[3];
     }
     if (questionIndex > 4) {
-        document.getElementById("text").innerHTML = "Your final score is " + count; 
+        if(count < 0) {
+            count = 0;
+        }
+        document.getElementById("text").innerHTML = "Your final score is " + count;
         document.getElementById("text").style.display = "block";
         questionBox.innerHTML = "All Done!";
         document.getElementById("submitForm").style.visibility = "visible";
@@ -188,7 +199,10 @@ box3.addEventListener("click", function() {
         box3.innerHTML = allQuestions[questionIndex].choices[3];
     }
     if (questionIndex > 4) {
-        document.getElementById("text").innerHTML = "Your final score is " + count; 
+        if(count < 0) {
+            count = 0;
+        }
+        document.getElementById("text").innerHTML = "Your final score is " + count;
         document.getElementById("text").style.display = "block";
         questionBox.innerHTML = "All Done!";
         document.getElementById("submitForm").style.visibility = "visible";
@@ -203,53 +217,9 @@ box3.addEventListener("click", function() {
 var submitBtn = document.getElementById("submit-button");
 var initialsBox = document.getElementById("initialsBox");
 
-submitBtn.addEventListener("click", savedScores);
+submitBtn.addEventListener("click", saveScores);
 
-function savedScores() {
+function saveScores() {
     localStorage.setItem(initialsBox.value, count);
     localStorage.getItem(initialsBox.value);
 }
-
-
-// box0.addEventListener("click", nextQuestion);
-// box1.addEventListener("click", nextQuestion);
-// box2.addEventListener("click", nextQuestion);
-// box3.addEventListener("click", nextQuestion);
-
-// function nextQuestion() {
-//     for (var i = 0; i < 4; ++i) {
-//         if (allQuestions[questionIndex].choices[i] === allQuestions[questionIndex].answer) {
-//             questionAnswer.innerHTML = "<hr>Correct!";
-//             setTimeout(function() {
-//                 questionAnswer.innerHTML = "";    
-//             }, 500);
-//         } else {
-//             questionAnswer.innerHTML = "<hr>Wrong!";
-//             count = count - 10;
-//             document.getElementById("timer").innerHTML = "Time: " + count;
-//             setTimeout(function() {
-//                 questionAnswer.innerHTML = "";    
-//             }, 500);
-//         }
-
-//         questionIndex++;
-//         if  (questionIndex <= 4) {
-//             questionBox.innerHTML = allQuestions[questionIndex].title;
-//             box0.innerHTML = allQuestions[questionIndex].choices[0];
-//             box1.innerHTML = allQuestions[questionIndex].choices[1];
-//             box2.innerHTML = allQuestions[questionIndex].choices[2];
-//             box3.innerHTML = allQuestions[questionIndex].choices[3];
-//         }
-//         if (questionIndex > 4) {
-//             document.getElementById("text").innerHTML = "Your final score is " + count; 
-//             document.getElementById("text").style.display = "block";
-//             questionBox.innerHTML = "All Done!";
-//             document.getElementById("submitForm").style.visibility = "visible";
-//             document.getElementById("choice0").style.display = "none";
-//             document.getElementById("choice1").style.display = "none";
-//             document.getElementById("choice2").style.display = "none";
-//             document.getElementById("choice3").style.display = "none";
-//         }
-//     }
-// }
-
