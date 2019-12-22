@@ -21,7 +21,8 @@ Project is created with :
 
 ## Summary
 
-This project is a code quiz with multiple-choice questions.
+This project is a quiz about capital cities in the World. Each question answered incorrectly will make the timer go down by 10 seconds. 
+The score is calculated by time remaining.
 
 ## Author
 

@@ -6,7 +6,7 @@ var box2 = document.getElementById("choice2");
 var box3 = document.getElementById("choice3");
 var questionAnswer = document.getElementById("answers");
 var questionIndex = 0;
-var count = 75;
+var count = 150;
 var backBtn = document.getElementById("back-button");
 
 document.getElementById("choice0").style.visibility = "hidden";
@@ -21,7 +21,7 @@ function startQuiz() {
 
     document.getElementById("timer").innerHTML = "Time: " + count;
     var i = setInterval(function(){
-        if (questionIndex > 4) {
+        if (questionIndex > 9) {
             clearInterval(i);
             document.getElementById("timer").style.visibility = "hidden";
         } else {
@@ -74,14 +74,14 @@ box0.addEventListener("click", function() {
     }
 
     questionIndex++;
-    if (questionIndex <= 4) {
+    if (questionIndex <= 9) {
         questionBox.innerHTML = allQuestions[questionIndex].title;
         box0.innerHTML = allQuestions[questionIndex].choices[0];
         box1.innerHTML = allQuestions[questionIndex].choices[1];
         box2.innerHTML = allQuestions[questionIndex].choices[2];
         box3.innerHTML = allQuestions[questionIndex].choices[3];
     }
-    if (questionIndex > 4) {
+    if (questionIndex > 9) {
         if(count < 0) {
             count = 0;
         }
@@ -113,14 +113,14 @@ box1.addEventListener("click", function() {
     }
 
     questionIndex++;
-    if (questionIndex <= 4) {
+    if (questionIndex <= 9) {
         questionBox.innerHTML = allQuestions[questionIndex].title;
         box0.innerHTML = allQuestions[questionIndex].choices[0];
         box1.innerHTML = allQuestions[questionIndex].choices[1];
         box2.innerHTML = allQuestions[questionIndex].choices[2];
         box3.innerHTML = allQuestions[questionIndex].choices[3];
     }
-    if (questionIndex > 4) {
+    if (questionIndex > 9) {
         if(count < 0) {
             count = 0;
         }
@@ -152,14 +152,14 @@ box2.addEventListener("click", function() {
     }
 
     questionIndex++;
-    if (questionIndex <= 4) {
+    if (questionIndex <= 9) {
         questionBox.innerHTML = allQuestions[questionIndex].title;
         box0.innerHTML = allQuestions[questionIndex].choices[0];
         box1.innerHTML = allQuestions[questionIndex].choices[1];
         box2.innerHTML = allQuestions[questionIndex].choices[2];
         box3.innerHTML = allQuestions[questionIndex].choices[3];
     }
-    if (questionIndex > 4) {
+    if (questionIndex > 9) {
         if(count < 0) {
             count = 0;
         }
@@ -191,14 +191,14 @@ box3.addEventListener("click", function() {
     }
 
     questionIndex++;
-    if (questionIndex <= 4) {
+    if (questionIndex <= 9) {
         questionBox.innerHTML = allQuestions[questionIndex].title;
         box0.innerHTML = allQuestions[questionIndex].choices[0];
         box1.innerHTML = allQuestions[questionIndex].choices[1];
         box2.innerHTML = allQuestions[questionIndex].choices[2];
         box3.innerHTML = allQuestions[questionIndex].choices[3];
     }
-    if (questionIndex > 4) {
+    if (questionIndex > 9) {
         if(count < 0) {
             count = 0;
         }
